@@ -12,14 +12,10 @@ public:
 
     bool IsSuper() const;
 
-    //bool IsActive() const;
-    //void SetActive(bool status);
-    //int GetY() const { return y; }
-
 private:
     int dir;
     bool is_super;
-    //bool is_active;
+    
 };
 
 #endif // BULLET_H

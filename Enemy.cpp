@@ -24,11 +24,11 @@ Enemy::Enemy(int start_x, int start_y, AlienType alien_type, Sprite enemy_sprite
 }
 
 void Enemy::Update() {
-    // Рух ворогів обробляється централізовано у класі Game
+    // Движение врагов обрабатывается централизованно в классе Game
 }
 
 void Enemy::Draw() {
-    // Малювання обробляється централізовано в класі Game
+    // Отрисовка обрабатывается централизованно в классе Game
 }
 
 AlienType Enemy::GetType() const {

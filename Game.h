@@ -11,7 +11,7 @@
 #include "Enemy.h"
 #include "Bullet.h"
 
-struct GLFWwindow; // Forward declaration
+struct GLFWwindow; // Прямое определение ??
 
 // Структура для буфера экрана
 struct Buffer {
@@ -36,7 +36,7 @@ struct Bunker {
 };
 
 class Game {
-    public: // <--- УБЕДИТЕСЬ, ЧТО ЭТО КЛЮЧЕВОЕ СЛОВО СТОИТ ЗДЕСЬ
+    public: 
     Game(int width, int height);
     ~Game();
 

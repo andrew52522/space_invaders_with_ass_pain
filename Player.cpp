@@ -7,18 +7,18 @@ Player::Player(int start_x, int start_y, Sprite player_sprite) : life(3) {
 }
 
 void Player::Update() {
-    // Логіка руху гравця
+    // Логика движения игрока
     int player_speed = 3;
     long new_x = this->x + (long)(player_speed * move_dir);
 
-    // Перевірка меж екрану (припустимо, ширина екрану 640)
+    // Проверка границ экрана (предположим, ширина экрана 640)
     if (new_x >= 0 && new_x <= 640 - this->sprite.width) {
         this->x = new_x;
     }
 }
 
 void Player::Draw() {
-    // Малювання обробляється централізовано в класі Game
+    // Отрисовка обрабатывается централизованно в классе Game
 }
 
 void Player::Move(int direction) {

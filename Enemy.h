@@ -16,7 +16,7 @@ public:
 
     void Update() override;
     void Draw() override;
-    void SetPosition(int start_x, int start_y); // Добавьте/проверьте это
+    void SetPosition(int start_x, int start_y);
     void Move(int dx, int dy);
     AlienType GetType() const;
     void TakeDamage(int amount);

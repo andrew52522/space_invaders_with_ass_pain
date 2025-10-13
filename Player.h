@@ -8,8 +8,8 @@ public:
     Player(int start_x, int start_y, Sprite player_sprite);
 
     void Update() override;
-    void Draw() override; // Поки що не реалізовано, оскільки малювання централізоване у Game
-     void SetPosition(int new_x, int new_y);
+    void Draw() override; // Пока не реализовано, поскольку отрисовка централизована в Game
+    void SetPosition(int new_x, int new_y);
     void Move(int direction);
     void SetLife(size_t new_life);
     size_t GetLife() const;

@@ -1,4 +1,3 @@
-// ЗАМЕНИТЕ ВЕСЬ ФАЙЛ main.cpp НА ЭТОТ КОД
 #include "Game.h"
 #include <iostream>
 

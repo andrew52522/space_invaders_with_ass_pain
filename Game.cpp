@@ -14,10 +14,8 @@
 #define ALIENS_COLS 11
 #define NUM_ALIENS (ALIENS_ROWS * ALIENS_COLS)
 
-// --- ВАШИ ДАННЫЕ СПРАЙТОВ ОСТАЮТСЯ ЗДЕСЬ ---
-// (Я их скрыл для краткости, но в вашем файле они должны остаться на месте)
-// ... (все ваши const uint8_t массивы и определения Sprite) ...
-// --- Спрайты пришельцев (из гайда) ---
+
+// --- Спрайты пришельцев  ---
     const uint8_t alien_a_frame1_data[] = {
         0,0,0,1,1,0,0,0, // ...@@...
         0,0,1,1,1,1,0,0, // ..@@@@..
@@ -737,7 +735,7 @@ const uint8_t font_5x7_data[] = {
     Sprite font_5x7_sprite_data = {5, 7, font_5x7_data};
 
 
-// --- ИСПРАВЛЕННЫЕ ШЕЙДЕРЫ ---
+// --- ШЕЙДЕРЫ ---
 const char* vertex_shader_source =
     "#version 330\n"
     "noperspective out vec2 TexCoord;\n"
@@ -765,7 +763,7 @@ bool validate_shader(GLuint shader_id, const std::string& type) {
         GLint log_length;
         glGetShaderiv(shader_id, GL_INFO_LOG_LENGTH, &log_length);
         
-        // ИЗМЕНЕНИЕ: Проверяем, что длина лога действительно больше нуля
+        // Проверяем, что длина лога действительно больше нуля
         if (log_length > 0) {
             std::vector<char> log(log_length);
             glGetShaderInfoLog(shader_id, log_length, nullptr, log.data());
@@ -812,9 +810,7 @@ void Game::CheckGLError() {
     }
 }
 
-// ВАЖНО: Вставьте этот код в ваш файл Game.cpp, полностью заменив старую функцию Init()
 
-// ЗАМЕНИТЕ ВЕСЬ ВАШ МЕТОД Init() НА ЭТОТ КОД
 void Game::Init() {
     std::cout << "INIT CHECKPOINT 1: Start" << std::endl;
 
@@ -968,8 +964,8 @@ void Game::KeyCallback(GLFWwindow* window, int key, int scancode, int action, in
     }
 }
 
-// ... (Ваши функции Update, CheckCollisions, ResetLevel и другие остаются без изменений)
-// ... (Вставьте сюда ваши функции без изменений, я их скрыл для краткости)
+
+
 void Game::Update() {
     player->Move(player_move_dir); 
     player->Update();
@@ -1403,7 +1399,7 @@ bool Game::validate_program(unsigned int program) {
         GLint len;
         glGetProgramiv(program, GL_INFO_LOG_LENGTH, &len);
 
-        // ИЗМЕНЕНИЕ: Проверяем, что длина лога действительно больше нуля
+        // Проверяем, что длина лога действительно больше нуля
         if (len > 0) {
             std::vector<char> log(len);
             glGetProgramInfoLog(program, len, nullptr, log.data());
