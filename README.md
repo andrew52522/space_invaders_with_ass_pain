@@ -17,27 +17,30 @@
 
 Библиотека для работы с консолью: ncurses (или аналог, например, PDCurses для Windows)
 
-Компиляция и запуск
-Клонируйте репозиторий:
+##Компиляция и запуск
+###Клонируйте репозиторий:
 
 Bash
 ```
 git clone https://github.com/andrew52522/space_invaders_with_ass_pain.git
+```
+Bash
+```
 cd space_invaders_with_ass_pain
 ```
 
-Скомпилируйте проект:
+###Скомпилируйте проект:
 Соберите все .cpp файлы и свяжите их с библиотекой ncurses.
 
 Bash
 ```
 g++ Main/main.cpp Game/Game.cpp Player/Player.cpp Enemy/Enemy.cpp Bullet/Bullet.cpp -Iinclude -IMain -IGame -IPlayer -IEnemy -IBullet -ISprites -Llib -lglew32 -lglfw3 -lopengl32 -lgdi32 -luser32 -o game.exe
 ```
-Запустите игру:
+###Запустите игру:
 
 Bash
 ```
-game.exe
+.\game.exe
 ```
 
 ## 🎮 Как играть
