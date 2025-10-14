@@ -3,12 +3,13 @@
 
 #include "GameObject.h"
 
-class Player : public GameObject {
+class Player : public GameObject
+{
 public:
     Player(int start_x, int start_y, Sprite player_sprite);
 
     void Update() override;
-    void Draw() override; // Пока не реализовано, поскольку отрисовка централизована в Game
+    void Draw() override;
     void SetPosition(int new_x, int new_y);
     void Move(int direction);
     void SetLife(size_t new_life);
