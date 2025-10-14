@@ -617,6 +617,8 @@ void Game::Render()
             const Sprite &s = enemy.GetSprite();
 
             uint32_t color;
+
+            // окрашиваем
             switch (type)
             {
             case AlienType::TYPE_A:
@@ -634,7 +636,7 @@ void Game::Render()
 
             DrawSprite(s, enemy.GetX(), enemy.GetY(), color);
         }
-        // Отрисовку взрывов тоже пока отключаем для чистоты теста
+        
 
         else if (death_counters[i] > 0)
         {
